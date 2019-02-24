@@ -146,7 +146,7 @@
     display: block;
     font-size: 0.8rem;
   }
-  // 老兵联络人（样式类似于商会接头人）
+  // 老兵联络人
   .soldier-img {
     margin: 9vw 0 0 4vw;
   }
