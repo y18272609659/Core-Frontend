@@ -5,6 +5,7 @@ import Register from '@/components/register'
 import Manor from '@/components/manor'
 import Building from '@/components/building'
 import Plat from '@/components/plat'
+import Suburb from '@/components/suburb'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ export default new Router({
       path: '/plat',
       name: 'Plat',
       component: Plat
-    },
+    }, {
+      path: '/suburb',
+      name: 'Suburb',
+      component: Suburb
+    }
   ]
 })

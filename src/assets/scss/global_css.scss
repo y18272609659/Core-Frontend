@@ -34,6 +34,7 @@
 // 2.按钮的display样式默认为inline-block，如需修改为其他值，可以直接在组件的CSS样式中设置。
 // 3.按钮背景颜色（background）默认为 $button-background-color（见上） ，字体颜色（color）默认为白色。
 // 4.如需要改变按钮颜色，则需要给按钮一个class='颜色名-button'，目前有十一种颜色可用，具体见下方代码。
+// 5.（2月24日新增）鼠标移动到按钮上时，鼠标会变成小手形状。
   button, .button {
     // 为button标签设置通用样式
       display: $button-display;
@@ -49,6 +50,7 @@
       color: white;
       outline: none;
       background: $button-background-color;
+      cursor: pointer;
       // 按钮的按压样式
       &:active {
         box-shadow: 0 2px #909090;
@@ -57,7 +59,7 @@
   }
 // 为不同标签设置不同颜色，class = 颜色名-button ，eg： class = 'yellow-button'
   @each $color in red, orange, yellow, green,
-  skyblue, blue, purple, pink,
+  skyblue, dodgerblue, blue, purple, pink,
   black, white, gray {
     .#{$color}-button {
       background: $color;

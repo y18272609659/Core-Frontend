@@ -8,7 +8,7 @@
           <div class="resource-wrapper">
             <VResourceBar />
           </div>
-          <div class="building-name" @click="jump('manor')">
+          <div class="building-name" @click="jump('manor')" style="cursor: pointer">
             <span class="iconfont king-crown">&#xe600;</span>
             {{kingdom}}
           </div>
@@ -52,6 +52,7 @@
             <button class="link" @click="jump('building')">建筑</button>
             <button class="link" @click="jump('plat')">地图</button>
             <button class="link" @click="jump('#')">军事</button>
+            <button class="link" @click="jump('suburb')">郊外</button>
           </div>
         </div>
       </div>
@@ -431,8 +432,7 @@
       }
 
       // 赋值用户数据
-      let user = JSON.parse(localStorage.getItem('user'))
-      this.$store.commit('setUser', user)
+      this.setUser()
 
       // 获取用户数据并赋值
       this.axios.get('building/index').then((response) => {
